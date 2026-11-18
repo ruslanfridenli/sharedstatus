@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
@@ -17,19 +17,19 @@ struct ContentView: View {
     }
 
     private var selectedPet: buddyPet {
-        buddyPet.all.first(where: { $0.id == currentPetId }) ?? buddyPet.all[0]
+        buddyPet.all.first(where: { $0.id == currentPetId }) ?? buddyPet.all[0][0]
     }
 
     private var selectedStatus: buddyStatus {
-        buddyStatus.all.first(where: { $0.id == currentStatusId }) ?? buddyStatus.all[0]
+        buddyStatus.all.first(where: { $0.id == currentStatusId }) ?? buddyStatus.all[0][0]
     }
 
     private var partnerPet: buddyPet {
-        buddyPet.all.first(where: { $0.id == partnerPetId }) ?? buddyPet.all[1]
+        buddyPet.all.first(where: { $0.id == partnerPetId }) ?? buddyPet.all[0][1]
     }
 
     private var partnerStatus: buddyStatus {
-        buddyStatus.all.first(where: { $0.id == partnerStatusId }) ?? buddyStatus.all[3]
+        buddyStatus.all.first(where: { $0.id == partnerStatusId }) ?? buddyStatus.all[0][3]
     }
 
 
@@ -40,7 +40,7 @@ struct ContentView: View {
             VStack(spacing: 22) {
                 // top bar
                 HStack {
-                    Text("sharedstatus ☁️")
+                    Text("sharedstatus â˜ï¸")
                         .font(.system(.title3, design: .rounded, weight: .semibold))
 
                     if isSyncing {
@@ -69,7 +69,7 @@ struct ContentView: View {
 
                 // pet selector
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(lang == .de ? "wähle dein tierchen" : "pick your little buddy")
+                    Text(lang == .de ? "wÃ¤hle dein tierchen" : "pick your little buddy")
                         .font(.system(.subheadline, design: .rounded, weight: .medium))
                         .foregroundStyle(.secondary)
 
@@ -269,7 +269,7 @@ struct ContentView: View {
                 haptic()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { copied = false }
                 } label: {
-                Text(copied ? (lang == .de ? "kopiert ✓" : "copied ✓") : (lang == .de ? "kopieren" : "copy"))
+                Text(copied ? (lang == .de ? "kopiert âœ“" : "copied âœ“") : (lang == .de ? "kopieren" : "copy"))
                 .font(.system(.caption, design: .rounded, weight: .medium))
                 .padding(.horizontal, 12)
                 .padding(.vertical, 6)
@@ -296,7 +296,7 @@ struct ContentView: View {
                 private func joinOrCreateRoom() {
                 haptic()
                 if inputCode.trimmingCharacters(in: .whitespaces).isEmpty {
-                let words = ["kafe", "miau", "wolke", "mond", "tee", "fuchs", "bär"]
+                let words = ["kafe", "miau", "wolke", "mond", "tee", "fuchs", "bÃ¤r"]
                 let num = Int.random(in: 10...99)
                 roomCode = "(words.randomElement()!)-(num)"
                 } else {
