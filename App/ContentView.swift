@@ -32,6 +32,7 @@ struct ContentView: View {
         buddyStatus.all.first(where: { $0.id == partnerStatusId }) ?? buddyStatus.all[3]
     }
 
+
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
