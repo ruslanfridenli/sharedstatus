@@ -17,10 +17,20 @@ jobs:
         run: brew install xcodegen
       - name: generate xcode project
         run: xcodegen generate
-      - name: build for ios simulator
+      - name: build unsigned ipa
         run: |
           xcodebuild build \
             -project sharedstatus.xcodeproj \
             -scheme sharedstatusapp \
-            -destination 'generic/platform=iOS Simulator' \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO
+          mkdir -p Payload
+          cp -r build/Build/Products/Release-iphoneos/sharedstatusapp.app Payload/
+          zip -r sharedstatus.ipa Payload
+      - name: upload ipa artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sharedstatus-ios
+          path: sharedstatus.ipa

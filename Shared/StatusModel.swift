@@ -44,3 +44,4 @@ struct buddyStatus: Identifiable, Codable, Equatable {
         buddyStatus(id: "miss", badge: "🤍", textDe: "denk an dich", textEn: "thinking of you")
     ]
 }
+# project sharedstatus
