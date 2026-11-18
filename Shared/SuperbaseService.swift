@@ -13,8 +13,7 @@ struct roomRecord: Codable {
 final class supabaseService {
     static let shared = supabaseService()
 
-    // вставь сюда свои данные из supabase -> project settings -> api
-    private let supabaseUrl = "https://qosummyejpfobqbqsgru.supabase.co/rest/v1/"
+    private let supabaseUrl = "https://supabase.co"
     private let supabaseKey = "sb_publishable_88dsq9wUV1H1Hbu0cbRBeA_xN8fPGjS"
 
     private func makeRequest(path: String, method: String = "GET", body: [String: Any]? = nil) -> URLRequest? {
