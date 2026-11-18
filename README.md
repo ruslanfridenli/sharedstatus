@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # sharedstatus ☁️
 
@@ -8,6 +8,12 @@
 ![swift](https://shields.io)
 ![lang](https://shields.io)
 ![privacy](https://shields.io)
+
+<br/>
+
+<img src="assets/widget-small.svg" height="190" alt="small widget preview"/>
+&nbsp;&nbsp;&nbsp;
+<img src="assets/widget-medium.svg" height="190" alt="medium widget preview"/>
 
 </div>
 
@@ -50,32 +56,31 @@ kein lärm, keine anrufe, kein druck sofort zu antworten — nur ein sanftes leb
 
 ---
 
-### 📸 screenshots · bildschirmfotos
-
-> *coming soon from ios simulator & testflight · folgen in kürze*
-
-| home screen widget | app status picker | room pairing |
-| :---: | :---: | :---: |
-| `coming soon ☁️` | `coming soon ☁️` | `coming soon ☁️` |
-
----
-
 ### 🛠️ architecture & stack
 
 ```text
 sharedstatus/
 ├── App/        # swiftui main interface, pet & vibe selector, room pairing
 ├── Widget/     # widgetkit adaptive home screen widget (.systemSmall & .systemMedium)
-├── Shared/     # app groups storage (group.com.sharedstatus.app) & de/en models
+├── Shared/     # app groups storage (group.com.sharedstatus.app) & supabase sync
+├── assets/     # vector widget previews
 └── .github/    # automated macos xcodebuild ci pipeline
 ```
 
-* **ui & widget:** `swiftui` + `widgetkit`
-* **shared state:** `app groups` (`userdefaults` suite)
-* **backend (next step):** `supabase` + silent `apns` push updates
+---
+
+### 🤍 support · unterstützung
+
+wenn dir dieses projekt gefällt oder hilft, würde mir eine spende sehr viel bedeuten und dabei helfen, es weiterzuentwickeln. alternativ kannst du das projekt mit einem stern ⭐ im github-repository unterstützen. vielen dank!
+
+if you enjoy this tiny project, a small donation means a lot and helps keep it growing — or simply leave a star ⭐ on github. thank you!
+
+* **solana:** `zQpgZ6nGigww7vYpz3Qqxb1BT44kqS567vFaLTeHagS`
+* **ethereum:** `0x9c4fE1B2e9a1A9c22312c8296BB088Ca0e8F1B4e`
+* **bitcoin:** `bc1p2jltk9ya9kyzv35d8kxn7mmg9jqkx66cqtgzqwe75zlr4v9jk4hsv468q7`
 
 ---
 
 <div align="center">
-<sub>made with ☁️ & ☕️ · made by ruslan✌️</sub>
+<sub>made with ☁️ & ☕️ · made by ruslan ✌️ · all lowercase always</sub>
 </div>

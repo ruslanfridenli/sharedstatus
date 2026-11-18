@@ -1,0 +1,16 @@
+﻿<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://w3.org">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2c2c2e"/>
+      <stop offset="100%" stop-color="#1c1c1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="46" fill="url(#bg)"/>
+  <rect x="1" y="1" width="238" height="238" rx="45" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+  <text x="28" y="84" font-size="56">🦊</text>
+  <text x="76" y="92" font-size="26">☕️</text>
+  <rect x="156" y="32" width="56" height="24" rx="12" fill="white" fill-opacity="0.08"/>
+  <text x="184" y="48" fill="#a1a1aa" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">buddy</text>
+  <text x="28" y="176" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="600">lust auf kaffee?</text>
+  <text x="28" y="202" fill="#8e8e93" font-family="system-ui, -apple-system, sans-serif" font-size="14">gerade eben · de</text>
+</svg>
