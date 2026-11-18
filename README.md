@@ -77,5 +77,5 @@ sharedstatus/
 ---
 
 <div align="center">
-<sub>made with ☁️ & ☕️ · all lowercase always</sub>
+<sub>made with ☁️ & ☕️ · made by ruslan✌️</sub>
 </div>
