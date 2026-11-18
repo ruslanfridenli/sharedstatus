@@ -1,0 +1,31 @@
+name: sharedstatus
+options:
+  bundleIdPrefix: com.sharedstatus
+targets:
+  sharedstatusapp:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - App
+      - Shared
+    settings:
+      base:
+        INFOPLIST_FILE: App/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.sharedstatus.app
+        INFOPLIST_KEY_CFBundleDisplayName: sharedstatus
+    dependencies:
+      - target: statuswidgetextension
+
+  statuswidgetextension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - Widget
+      - Shared
+    settings:
+      base:
+        INFOPLIST_FILE: Widget/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.sharedstatus.app.widget
+        INFOPLIST_KEY_CFBundleDisplayName: sharedstatus

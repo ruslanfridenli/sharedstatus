@@ -1,0 +1,19 @@
+name: build ios app
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install xcodegen
+        run: brew install xcodegen
+      - name: generate xcode project
+        run: xcodegen generate
+      - name: build for ios simulator
+        run: |
+          xcodebuild build \
+            -project sharedstatus.xcodeproj \
+            -scheme sharedstatusapp \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO
