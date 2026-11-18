@@ -7,6 +7,15 @@ struct sharedStore {
         UserDefaults(suiteName: suiteName) ?? .standard
     }
 
+    static var deviceId: String {
+        if let existing = defaults.string(forKey: "deviceId") {
+            return existing
+        }
+        let newId = UUID().uuidString.lowercased()
+        defaults.set(newId, forKey: "deviceId")
+        return newId
+    }
+
     static var currentPetId: String {
         get { defaults.string(forKey: "currentPetId") ?? "cat" }
         set { defaults.set(newValue, forKey: "currentPetId") }
