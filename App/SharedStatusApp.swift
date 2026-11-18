@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct SharedStatusApp: App {
+struct sharedstatusapp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

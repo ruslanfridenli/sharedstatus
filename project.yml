@@ -9,6 +9,11 @@ targets:
     sources:
       - App
       - Shared
+    entitlements:
+      path: App/sharedstatusapp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.sharedstatus.app
     settings:
       base:
         INFOPLIST_FILE: App/Info.plist
@@ -24,6 +29,11 @@ targets:
     sources:
       - Widget
       - Shared
+    entitlements:
+      path: Widget/statuswidgetextension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.sharedstatus.app
     settings:
       base:
         INFOPLIST_FILE: Widget/Info.plist
